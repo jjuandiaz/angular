@@ -29,6 +29,13 @@ clave: 123456
 ejecutar `ng build` para construir el proyecto para produccion. Los artefactos de la construccion del proyecto se encuentran en  `dist/` directorio.
 instalar firebase para hospedarlo en el mismo
 
+cambiar carpeta de salida proyecto (output archivos dist)
+outputPath: "docs" //esto es utilizado para github pages
+
+ejecutar comando para asignar otra ruta base
+ng build --baseHref=https://github.com/jjuandiaz/angular/
+luego en github vamos a settings -> pages -> source (selecconamos la rama donde esta la carpeta "docs") -> main -> docs y "save"
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
