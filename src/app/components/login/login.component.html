@@ -1,0 +1,52 @@
+<div class="container col-md-2" style="margin-top: 5%">
+  <div class="Icon">
+    <!--Icono de usuario-->
+    <span class="glyphicon glyphicon-user"></span>
+  </div>
+  <div class="ContentForm">
+    <form class="item" #f="ngForm" (ngSubmit)="f.form.valid && login(f)">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"
+          ><i class="glyphicon glyphicon-envelope"></i
+        ></span>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          ngModel
+          required
+          size="20"
+          placeholder="Correo"
+          id="Correo"
+          aria-describedby="sizing-addon1"
+          required  
+        />
+      </div>
+      <br />
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"
+          ><i class="glyphicon glyphicon-lock"></i
+        ></span>
+        <input
+          type="password"
+          name="password"
+          ngModel
+          class="form-control"
+          placeholder="Ingrese contraseña"
+          aria-describedby="sizing-addon1"
+          required
+        />
+      </div>
+      <br />
+      <button
+        style="cursor: pointer"
+        class="btn btn-lg btn-primary btn-block btn-signin"
+        id="IngresoLog"
+        type="submit"
+      >
+        Entrar
+      </button>
+    </form>
+    <p *ngIf="isError"> {{error}}</p>
+  </div>
+</div>

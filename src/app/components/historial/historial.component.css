@@ -1,0 +1,29 @@
+h1
+{
+    text-align: center;
+    color: blueviolet;
+}
+
+
+#tablaTransferencia {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tablaTransferencia td, #tablaTransferencia th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #tablaTransferencia tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #tablaTransferencia tr:hover {background-color: #ddd;}
+  
+  #tablaTransferencia th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: blueviolet;
+    color: white;
+  }

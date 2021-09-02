@@ -1,0 +1,73 @@
+<div class="container col-md-2" style="margin-left: 24%">
+  <h1>{{ titulo }}</h1>
+  <form id="formBuscador">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label>Buscar Destinatario</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Escribe Destinatario a Buscar"
+            (keyup)="search(input.value)"
+            #input
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <app-lista-detalle
+    *ngIf="filtered"
+    [detalles]="filtered"
+    (detalleEmitter)="procesaPropagar($event)"
+  ></app-lista-detalle>
+  <br />
+  <div   *ngIf="filtered">
+    <strong> <h6>Destalle del destinatario</h6> </strong>
+    <div>
+       <div class="row">
+        <label>Nombre</label>
+        <label name="tasknote" id="lblNombre"> </label>
+        {{ detalleResultado.persona.nombre }}
+      </div>
+      <div class="row">
+        <label>Correo</label>
+        {{ detalleResultado.persona.correo }}
+      </div>
+      <div class="row">
+        <label>Banco</label>
+        {{ detalleResultado.cuenta.banco }}
+      </div>
+      <div class="row">
+        <label>Tipo de cuenta</label>
+        {{ detalleResultado.cuenta.tipo }}
+      </div>
+    </div>  
+  </div>
+  <br />
+
+  <form>
+    <div class="row">
+      <div class="form-group">
+        <label>Monto</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Escribe monto a Transferir "
+          [(ngModel)]="montoTransferencia"
+          name="montoTransferencia"
+        />
+      </div>
+    </div>
+    <br />
+    <button
+      type="submit"
+      style="margin-left: 75%"
+      class="btn btn-primary btn-block col-md-9"
+      (click)="realizarTransferencia()"
+    >
+      Transferir
+    </button>
+  </form>
+</div>

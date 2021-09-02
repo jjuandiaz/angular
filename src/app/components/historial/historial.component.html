@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>{{ titulo }}</h1>
+  <hr />
+
+  <table id="tablaTransferencia">
+    <th *ngFor="let column of headers">
+      {{ column }}
+    </th>
+    <tr *ngFor="let row of transacciones">
+      <td>
+        {{ row.persona.nombre }}
+      </td>
+      <td>
+        {{ row.persona.rut   }}
+      </td>
+      <td>
+        {{ row.cuenta.banco }}
+      </td>
+      <td>
+        {{ row.cuenta.tipo }}
+      </td>
+      <td>
+        {{ (row.monto | currency:'$':'symbol')!.replace(",",".")}}
+      </td>
+    </tr>
+  </table>
+</div>

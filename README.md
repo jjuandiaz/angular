@@ -1,18 +1,33 @@
 # ServicioTransferencia
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
+Este proyecto fue generado utilizando [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
+para prueba tecnica de multitienda RP, simulando un sistema bancario de transferencias a destinatarios.
+
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
+Tecnologias utilizadas
+1.- Mongodb
+2.- Node utilizando framework express para el backend
+3.- Angular 8 Frontend
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+se consume un API mediante GET
 
+En primer lugar se crean los componentes:
+1.- persona
+2.- transferencia
+3.- historial de transacciones
+
+luego de lo anterior se agrega firebase para incorporar metodo de auth al login 
+usuario: admin@demo.cl
+clave: 123456
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+ejecutar `ng build` para construir el proyecto para produccion. Los artefactos de la construccion del proyecto se encuentran en  `dist/` directorio.
+instalar firebase para hospedarlo en el mismo
 
 ## Running unit tests
 

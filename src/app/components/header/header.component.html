@@ -1,0 +1,16 @@
+<div class="row" style=" background-color: rgb(204, 166, 240);">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <h1>{{ titulo }}</h1>
+    </div>
+
+    <div class="col-md-auto" *ngIf="isAuthtenticado()">
+      <button (click)="navegarPagina('destinatario')">
+        Nuevo Destinatario
+      </button>
+      <button (click)="navegarPagina('transferencia')">Transferir</button>
+      <button (click)="navegarPagina('historial')">Historial</button>
+      <button (click)="salir()">Logout</button>
+    </div>
+  </div>
+</div>
