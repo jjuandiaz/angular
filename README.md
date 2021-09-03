@@ -33,7 +33,7 @@ cambiar carpeta de salida proyecto (output archivos dist)
 outputPath: "docs" //esto es utilizado para github pages
 
 ejecutar comando para asignar otra ruta base
-ng build --baseHref=https://github.com/jjuandiaz/angular/
+ng build --output-path docs --base-href /angular/
 luego en github vamos a settings -> pages -> source (selecconamos la rama donde esta la carpeta "docs") -> main -> docs y "save"
 
 ## Running unit tests
