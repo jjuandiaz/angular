@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  URL_API: "http://localhost:4006/"
+  URL_API: "https://apiserviciotransferencia.herokuapp.com/"
 };
